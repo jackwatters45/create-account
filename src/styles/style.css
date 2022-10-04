@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --main-background-color: rgb(25, 25, 25);
+  --card-background-color: rgb(47, 47, 47);
+  --section-background-color: rgb(28, 28, 28);
+  --card-hover-background-color: rgb(55, 55, 55);
+  --main-font-color: rgba(255, 255, 255, .81);
+  --secondary-font-color: rgb(127, 127, 127);
+  --empty-font-color: rgba(255, 255, 255, 0.282);
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--main-font-color);
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
+}
+
+/* General Styles */
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--main-font-color);
+}
+
+hr {
+  background-color: var(--main-font-color);
+  border: none;
+  height: 1px;
+}
+
+input {
+  background-color: transparent;
+  border: inherit;
+  outline: none;
+  color: var(--main-font-color);
+  font-size: 14px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Hover Styling */
+
+
+/* Cursor */
+input {
+  cursor: pointer;
+}
+
+/* Assets */
+img {
+  width: 16px;
+}
+
+/* Layout */
+.container {
+  display: grid;
+  height: 100vh;
+  margin: 0 auto;
+  grid-template-rows: 1fr 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Content */
+.form-card {
+  /* height: 600px;
+  width: 400px; */
+  height: fit-content;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border-radius: 4px;
+  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
+  text-decoration: none;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
