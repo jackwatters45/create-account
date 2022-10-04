@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
 :root {
   --main-background-color: rgb(25, 25, 25);
   --card-background-color: rgb(47, 47, 47);
@@ -17,47 +18,9 @@
 body {
   background-color: var(--main-background-color);
   color: var(--main-font-color);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
   user-select: none;
-}
-
-/* General Styles */
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: var(--main-font-color);
-}
-
-hr {
-  background-color: var(--main-font-color);
-  border: none;
-  height: 1px;
-}
-
-input {
-  background-color: transparent;
-  border: inherit;
-  outline: none;
-  color: var(--main-font-color);
-  font-size: 14px;
-}
-
-.hidden {
-  display: none;
-}
-
-/* Hover Styling */
-
-
-/* Cursor */
-input {
-  cursor: pointer;
-}
-
-/* Assets */
-img {
-  width: 16px;
 }
 
 /* Layout */
@@ -65,21 +28,35 @@ img {
   display: grid;
   height: 100vh;
   margin: 0 auto;
-  grid-template-rows: 1fr 40px;
+  grid-template-rows: 1fr 2rem;
   justify-content: center;
   align-items: center;
 }
 
-/* Main Content */
+/* Form Content */
 .form-card {
-  /* height: 600px;
-  width: 400px; */
+  width: 600px;
   height: fit-content;
   padding: 2rem;
+  margin: 1rem;
   background-color: var(--card-background-color);
   border-radius: 4px;
   box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
   text-decoration: none;
+}
+
+.form-card>h1 {
+  text-align: center;
+}
+
+.form-item {
+  font-size: 20px;
+  padding: 24px 0px;
+  display: flex;
+}
+
+.form-item>* {
+  width: 50%;
 }
 
 /* Footer */
@@ -88,4 +65,75 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+/* General Styling */
+button {
+  color: var(--main-font-color);
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 3rem;
+  background-color: var(--section-background-color);
+  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
+}
+
+button,
+.first-form-item {
+  margin-top: 1rem;
+}
+
+input {
+  background-color: transparent;
+  border: inherit;
+  outline: none;
+  font-size: inherit;
+  color: var(--main-font-color);
+  cursor: auto;
+  border-bottom: 1px solid var(--secondary-font-color);
+  background-color: rgba(255, 255, 255, 0.055);
+  border-radius: 4px;
+  height: 40px;
+  padding: 5px;
+  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--main-font-color);
+}
+
+h1 {
+  font-size: 36px;
+}
+
+hr {
+  background-color: var(--main-font-color);
+  border: none;
+  height: 1px;
+}
+
+/* Hover */
+input:hover {
+  background-color: var(--card-hover-background-color);
+}
+
+button:hover {
+  background-color: var(--main-background-color);
 }
