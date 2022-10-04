@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-
 :root {
   --main-background-color: rgb(25, 25, 25);
   --card-background-color: rgb(47, 47, 47);
