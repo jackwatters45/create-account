@@ -26,6 +26,14 @@ body {
 /* General Styles */
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: var(--main-font-color);
+}
+
+hr {
+  background-color: var(--main-font-color);
+  border: none;
+  height: 1px;
 }
 
 input {
@@ -36,18 +44,12 @@ input {
   font-size: 14px;
 }
 
-.shadow {
-  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
-}
-
 .hidden {
   display: none;
 }
 
 /* Hover Styling */
-.form:hover {
-  background-color: var(--card-hover-background-color);
-}
+
 
 /* Cursor */
 input {
@@ -55,11 +57,6 @@ input {
 }
 
 /* Assets */
-.github-logo {
-  height: 20px;
-  margin: auto 0;
-}
-
 img {
   width: 16px;
 }
@@ -70,6 +67,20 @@ img {
   height: 100vh;
   margin: 0 auto;
   grid-template-rows: 1fr 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Content */
+.form-card {
+  /* height: 600px;
+  width: 400px; */
+  height: fit-content;
+  padding: 2rem;
+  background-color: var(--card-background-color);
+  border-radius: 4px;
+  box-shadow: rgb(15 15 15 / 10%) 0px 0px 0px 1px, rgb(15 15 15 / 10%) 0px 2px 4px;
+  text-decoration: none;
 }
 
 /* Footer */
@@ -78,8 +89,4 @@ img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-.footer>a {
-  display: flex;
 }
