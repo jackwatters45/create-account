@@ -59,6 +59,18 @@ body {
   width: 50%;
 }
 
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  background-color: #7f1d1d;
+  border-radius: 2px;
+  font-size: 12px;
+  padding: 0px 4px;
+}
+
 /* Footer */
 .footer {
   display: flex;

@@ -15,24 +15,39 @@
             <hr>
             <form class="form" id="form" action="#" method="#">
                 <div class="form-item first-form-item">
-                    <label for="email">Email: </label>
-                    <input id="email" type="email">
+                    <label class="form-label" for="email">Email: </label>
+                    <div class="form-input">
+                        <input id="email" type="email">
+                        <span class="error email-error">T</span>
+                    </div>
                 </div>
                 <div class="form-item">
-                    <label for="country">Country: </label>
-                    <input id="country" type="text">
+                    <label class="form-label" for="country">Country: </label>
+                    <div class="form-input">
+                        <input id="country" type="text">
+                        <span class="error country-error"></span>
+                    </div>
                 </div>
                 <div class="form-item">
-                    <label for="zip-code">Zip Code: </label>
-                    <input id="zip-code" type="number">
+                    <label class="form-label" for="zip-code">Zip Code: </label>
+                    <div class="form-input">
+                        <input id="zip-code" type="number">
+                        <span class="error zip-code-error"></span>
+                    </div>
                 </div>
                 <div class="form-item">
-                    <label for="password">Password: </label>
-                    <input id="password" type="text">
+                    <label class="form-label" for="password">Password: </label>
+                    <div class="form-input">
+                        <input id="password" type="text">
+                        <span class="error password-error"></span>
+                    </div>
                 </div>
                 <div class="form-item">
-                    <label for="confirm-password">Confirm Password: </label>
-                    <input id="confirm-password" type="text">
+                    <label class="form-label" for="confirm-password">Confirm Password: </label>
+                    <div class="form-input">
+                        <input id="confirm-password" type="text">
+                        <span class="error confirm-password-error"></span>
+                    </div>
                 </div>
                 <button type="submit" form="form">Create Account</button>
             </form>
