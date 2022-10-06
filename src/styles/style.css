@@ -149,3 +149,12 @@ input:hover {
 button:hover {
   background-color: var(--main-background-color);
 }
+
+/* Valid/Invalid */
+input:invalid {
+  border-bottom: 2px solid #7f1d1d;
+}
+
+input:valid {
+  border-bottom: 2px solid #064e3b;
+}

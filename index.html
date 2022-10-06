@@ -13,39 +13,41 @@
         <div class="form-card">
             <h1>Create an Account</h1>
             <hr>
-            <form class="form" id="form" action="#" method="#">
+            <form novalidate class="form" id="form" action="#" method="#">
                 <div class="form-item first-form-item">
                     <label class="form-label" for="email">Email: </label>
                     <div class="form-input">
-                        <input id="email" type="email">
-                        <span class="error email-error">T</span>
+                        <input id="email" type="email" name="email" minlength="7"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <span class="error email-error" aria-live="polite"></span>
                     </div>
                 </div>
                 <div class="form-item">
                     <label class="form-label" for="country">Country: </label>
                     <div class="form-input">
-                        <input id="country" type="text">
-                        <span class="error country-error"></span>
+                        <input id="country" type="text" name="country" pattern="^[a-zA-Z]+$" required>
+                        <span class="error country-error" aria-live="polite"></span>
                     </div>
                 </div>
                 <div class="form-item">
                     <label class="form-label" for="zip-code">Zip Code: </label>
                     <div class="form-input">
-                        <input id="zip-code" type="number">
+                        <input id="zip-code" type="text" name="zip-code" pattern="[0-9]{5}" required>
                         <span class="error zip-code-error"></span>
                     </div>
                 </div>
                 <div class="form-item">
                     <label class="form-label" for="password">Password: </label>
                     <div class="form-input">
-                        <input id="password" type="text">
+                        <input id="password" type="text" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            required>
                         <span class="error password-error"></span>
                     </div>
                 </div>
                 <div class="form-item">
                     <label class="form-label" for="confirm-password">Confirm Password: </label>
                     <div class="form-input">
-                        <input id="confirm-password" type="text">
+                        <input id="confirm-password" type="text" name="confirm-password" required>
                         <span class="error confirm-password-error"></span>
                     </div>
                 </div>
