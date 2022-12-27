@@ -3,7 +3,7 @@ import validateEmail from './functions/validateEmail';
 import validateCountry from './functions/validateCountry';
 import validateZip from './functions/validateZip';
 import validatePassword from './functions/validatePassword';
-import validateConfirmPassword from './functions/validateConfirmPassword'
+import validateConfirmPassword from './functions/validateConfirmPassword';
 
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
@@ -19,22 +19,12 @@ password.addEventListener('input', () => validatePassword());
 confirmPassword.addEventListener('input', () => validateConfirmPassword());
 
 form.addEventListener('submit', (event) => {
-  if (!email.validity.valid) {
-    // If email isn't valid, display an appropriate error message
-    validateEmail();
-  } else if (!country.validity.valid) {
-    // If country isn't valid, display an appropriate error message
-    validateCountry();
-  } else if (!zipCode.validity.valid) {
-    // If zip code isn't valid, display an appropriate error message
-    validateZip();
-  } else if (!password.validity.valid) {
-    // TODO this part
-    // if password section isn't valid, display an appropriate error message
-    validatePassword();
-  } else if (!(password.value === confirmPassword.value)) {
-    validateConfirmPassword()
-  }
-  // Then we prevent the form from being sent by canceling the event
+  validateEmail();
+  validateCountry();
+  validateZip();
+  validatePassword();
+  validateConfirmPassword();
+
+  // prevent the form from being sent by canceling the event
   event.preventDefault();
 });
