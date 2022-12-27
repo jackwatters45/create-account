@@ -6,20 +6,11 @@ import showPasswordError from './functions/showPasswordError';
 
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
+const country = document.querySelector('#country');
 
 
 email.addEventListener('input', () => showEmailError());
-
-const country = document.querySelector('#country');
-const countryError = document.querySelector('.country-error');
-
-country.addEventListener('input', () => {
-  if (country.validity.valid || country.validity.valueMissing) {
-    countryError.innerHTML = ''; // resets validity text
-  } else {
-    showCountryError();
-  }
-});
+country.addEventListener('input', () => showCountryError());
 
 const zipCode = document.querySelector('#zip-code');
 const zipCodeError = document.querySelector('.zip-code-error');
