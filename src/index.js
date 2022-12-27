@@ -6,15 +6,9 @@ import showPasswordError from './functions/showPasswordError';
 
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
-const emailError = document.querySelector('.email-error');
 
-email.addEventListener('input', () => {
-  if (email.validity.valid) {
-    emailError.innerHTML = ''; // resets validity text
-  } else {
-    showEmailError();
-  }
-});
+
+email.addEventListener('input', () => showEmailError());
 
 const country = document.querySelector('#country');
 const countryError = document.querySelector('.country-error');
