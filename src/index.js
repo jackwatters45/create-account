@@ -7,21 +7,11 @@ import showPasswordError from './functions/showPasswordError';
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const country = document.querySelector('#country');
-
+const zipCode = document.querySelector('#zip-code');
 
 email.addEventListener('input', () => showEmailError());
 country.addEventListener('input', () => showCountryError());
-
-const zipCode = document.querySelector('#zip-code');
-const zipCodeError = document.querySelector('.zip-code-error');
-
-zipCode.addEventListener('input', () => {
-  if (zipCode.validity.valid) {
-    zipCodeError.innerHTML = ''; // resets validity text
-  } else {
-    showZipCodeError();
-  }
-});
+zipCode.addEventListener('input', () => showZipCodeError());
 
 const password = document.querySelector('#password');
 const passwordError = document.querySelector('.password-error');
