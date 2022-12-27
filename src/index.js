@@ -1,28 +1,19 @@
 import './styles/style.css';
-import showEmailError from './functions/showEmailError';
-import showCountryError from './functions/showCountryError';
-import showZipCodeError from './functions/showZipCodeError';
-import showPasswordError from './functions/showPasswordError';
+import validateEmail from './functions/validateEmail';
+import validateCountry from './functions/validateCountry';
+import validateZip from './functions/validateZip';
+import validatePassword from './functions/validatePassword';
 
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const country = document.querySelector('#country');
 const zipCode = document.querySelector('#zip-code');
-
-email.addEventListener('input', () => showEmailError());
-country.addEventListener('input', () => showCountryError());
-zipCode.addEventListener('input', () => showZipCodeError());
-
 const password = document.querySelector('#password');
-const passwordError = document.querySelector('.password-error');
 
-password.addEventListener('input', () => {
-  if (password.validity.valid) {
-    passwordError.innerHTML = ''; // resets validity text
-  } else {
-    showPasswordError();
-  }
-});
+email.addEventListener('input', () => validateEmail());
+country.addEventListener('input', () => validateCountry());
+zipCode.addEventListener('input', () => validateZip());
+password.addEventListener('input', () => validatePassword());
 
 const confirmPassword = document.querySelector('#confirm-password');
 const confirmPasswordError = document.querySelector('.confirm-password-error');
@@ -38,17 +29,17 @@ confirmPassword.addEventListener('input', () => {
 form.addEventListener('submit', (event) => {
   if (!email.validity.valid) {
     // If email isn't valid, display an appropriate error message
-    showEmailError();
+    validateEmail();
   } else if (!country.validity.valid) {
     // If country isn't valid, display an appropriate error message
-    showCountryError();
+    validateCountry();
   } else if (!zipCode.validity.valid) {
     // If zip code isn't valid, display an appropriate error message
-    showZipCodeError();
+    validateZip();
   } else if (!password.validity.valid) {
     // TODO this part
     // if password section isn't valid, display an appropriate error message
-    showPasswordError();
+    validatePassword();
   } else if (!(password.value === confirmPassword.value)) {
     confirmPasswordError.innerHTML = 'Does not match password';
   }
